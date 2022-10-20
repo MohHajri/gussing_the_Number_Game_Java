@@ -37,7 +37,9 @@ public class Player {
     }
 
     public void playerNameInput() {
-        System.out.println("Enter your name: ");
+        System.out.println("Enter your name: "); // you don't want to have scanner in your class, because it 
+                                                 // tightly links it to external scanner interface
+                                                 // use constructor and get(set)ters instead
         Scanner s = new Scanner(System.in);
         setPlayerName(s.nextLine());
 
